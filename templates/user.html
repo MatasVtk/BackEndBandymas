@@ -5,21 +5,26 @@
     <title>User</title>
     <link rel="stylesheet" href="../static/styles.css">
 </head>
-<header>
-    <nav class="nav-bar">
-        <a href="/"><h2>Home</h2></a>
-        <a href="/users">View User</a>
-        <a href="/store">Store</a>
-        <a href="/change_password">change_password</a>
-        <a href="/logout">Logout</a>
-    </nav>  
-</header>
 <body>
-    <h1>Owned Packages</h1>
-    {% for package in packages %}
-    <li>
-        <p>Model: {{ package.name }}</p>
-    </li>
-        {% endfor %}
+    <div>
+        <header>
+            <nav class="nav-bar">
+                <a href="/"><h3>Home</h3></a>
+                <a href="/users">View User</a>
+                <a href="/store">Store</a>
+                <a href="/change_password">change_password</a>
+                <a href="/logout">Logout</a>
+            </nav>  
+        </header>
+    </div>
+    <div class="user">
+        <h1>Owned Packages</h1>
+        {% for package in packages %}
+        <li>
+            <p>Model: {{ package.name }}</p>
+        </li>
+            {% endfor %}
+            <h3>Credits: {{ user.credits }}</h3>
+    </div>
 </body>
 </html>

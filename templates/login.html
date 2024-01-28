@@ -6,10 +6,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <link rel="stylesheet" href="../static/styles.css">
 </head>
 <body>
-    <h2>Login</h2>
-    <form method="post" action="/login_form" id="loginForm">
+    <form class="login" method="post" action="/login_form" id="loginForm">
+        <h2>Login</h2>
         <label for="username">Username:</label>
         <input type="text" id="username" name="username" required>
         <br>
@@ -18,9 +19,5 @@
         <br>
         <button type="submit">Login</button>
     </form>
-    <script>
-
-
-    </script>
 </body>
 </html>

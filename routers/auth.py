@@ -14,7 +14,7 @@ templates = Jinja2Templates(directory="templates")
 router = APIRouter(
     tags = ['Authentification']  
 )
- 
+
 @router.get("/")
 def read_root(request: Request):
     cookie = request.cookies.get("access_token")

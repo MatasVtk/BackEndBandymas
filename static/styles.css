@@ -10,12 +10,16 @@ body {
     color: white;
     padding: 15px;
     text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .nav-bar a {
     color: red;
     text-decoration: none;
-    margin: 0 15px;
+    margin: 10px;
     font-size: 16px;
 }
 
@@ -24,8 +28,8 @@ h1 {
     color: #333;
 }
 
-h2 div{
-    color: wheat;
+h2, div {
+    color: black;
 }
 
 p {
@@ -37,7 +41,7 @@ form {
 }
 
 button {
-    background-color: #4caf50;
+    background-color: #000000;
     color: white;
     padding: 10px 15px;
     border: none;
@@ -45,7 +49,7 @@ button {
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #707070;
 }
 
 /* Responsive Styles */
@@ -58,3 +62,52 @@ button:hover {
         margin: 10px 0;
     }
 }
+
+.change_password{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.new_password{
+    padding: 10px;
+}
+
+.submit_password{
+    padding: 10px;
+    margin-top: 15px;
+}
+
+.store{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.user{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #000000;
+}
+

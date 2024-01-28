@@ -22,5 +22,5 @@ def get_user(request: Request, db: Session = Depends(get_db), current_user: int 
     for advert_package in user.advert_packages:
         packages.append(schemas.AdvertPackage(name=advert_package.name, price=advert_package.price))
         
-    return templates.TemplateResponse("user.html", {"request": request, "packages": packages, "current_user": current_user})
+    return templates.TemplateResponse("user.html", {"request": request, "packages": packages, "current_user": current_user, "user": user})
 

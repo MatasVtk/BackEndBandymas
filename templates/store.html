@@ -9,13 +9,13 @@
 <body>
     <div>
         <nav class="nav-bar">
-            <a href="/"><h2>Home</h2></a>
+            <a href="/"><h3>Home</h3></a>
             <a href="/users">View User</a>
             <a href="/store">Store</a>
             <a href="/change_password">change_password</a>
             <a href="/logout">Logout</a>
         </nav>  
-        <div>
+        <div class="store">
             <h1>STORE</h1>
             {% for package in packages %}
                 <h2>{{ package.name }}</h2>
