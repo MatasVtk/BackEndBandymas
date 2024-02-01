@@ -65,8 +65,6 @@
         <option value="all">-</option>
     </select>
     
-    
-    
     <button type="submit" onclick="search()">Search</button>
 
     <script>
@@ -75,13 +73,13 @@
             var selectElementTo = document.getElementById("carYearSelectTo");
             var currentYear = new Date().getFullYear();
             var startYear = 1980;
-    
+
             for (var year = startYear; year <= currentYear; year++) {
                 var optionFrom = document.createElement("option");
                 optionFrom.value = year;
                 optionFrom.text = year;
                 selectElementFrom.appendChild(optionFrom);
-    
+
                 var optionTo = document.createElement("option");
                 optionTo.value = year;
                 optionTo.text = year;
@@ -167,14 +165,12 @@
             {
                 url = "cars/?car_make=" + selectedMake + "&car_model=" + selectedModel;
             }
-            a = console.log(url)
-            addParameterIfExists(url, "price_from", selectedPriceFrom);
-            console.log(url)
-            addParameterIfExists(url, "price_to", selectedPriceTo);
-            addParameterIfExists(url, "mileage_from", selectedMileageFrom);
-            addParameterIfExists(url, "mileage_to", selectedMileageTo);
-            addParameterIfExists(url, "year_from", selectedYearFrom);
-            addParameterIfExists(url, "year_to", selectedYearTo);
+            url = addParameterIfExists(url, "price_from", selectedPriceFrom);
+            url = addParameterIfExists(url, "price_to", selectedPriceTo);
+            url = addParameterIfExists(url, "mileage_from", selectedMileageFrom);
+            url = addParameterIfExists(url, "mileage_to", selectedMileageTo);
+            url = addParameterIfExists(url, "year_from", selectedYearFrom);
+            url = addParameterIfExists(url, "year_to", selectedYearTo);
         
             fetch(url)
                 .then(response => {
@@ -192,10 +188,10 @@
         }
         
         function addParameterIfExists(url, paramName, paramValue) {
-            if (paramValue) {
+            if (paramValue && paramValue !== "all") {
                 url += "&" + paramName + "=" + paramValue;
             }
-            
+            return url;
         }
         populateSelect();
     </script>
